@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, ProgressBar } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
 import pic from "../assets/Screenshot 2025-10-10 023205.png";
 import "./About.css";
