@@ -1,0 +1,183 @@
+/* ===============================
+   ⚡ 2025 Advanced Modern Projects
+=================================*/
+
+.projects-modern-section {
+  background: linear-gradient(135deg, #0d1117, #1b2735);
+  background-size: 400% 400%;
+  animation: projectsGradient 15s ease infinite;
+  padding: 100px 20px;
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Gradient Background */
+@keyframes projectsGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🌌 Floating Background Particles */
+.projects-modern-section::before,
+.projects-modern-section::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, rgba(0, 238, 255, 0.05) 2%, transparent 60%);
+  animation: floatParticles 30s linear infinite;
+  z-index: 0;
+}
+
+.projects-modern-section::after {
+  animation-delay: 15s;
+}
+
+@keyframes floatParticles {
+  0% { transform: translate(0,0) rotate(0deg); }
+  100% { transform: translate(10%,10%) rotate(360deg); }
+}
+
+/* 🌈 Section Titles */
+.projects-modern-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00e6ff, #ff00f7, #00e6ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  animation: titleFlow 5s infinite alternate;
+  margin-bottom: 60px;
+  text-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
+}
+
+@keyframes titleFlow {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+.projects-modern-subtitle {
+  color: #00e6ff;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Subtitle Glow Divider */
+.projects-modern-subtitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #00e6ff, #ff00f7);
+  margin: 8px auto 0;
+  border-radius: 3px;
+  animation: dividerGlow 3s infinite alternate;
+}
+
+@keyframes dividerGlow {
+  from { opacity: 0.6; transform: scaleX(0.8); }
+  to { opacity: 1; transform: scaleX(1.2); }
+}
+
+/* 🧩 Project Card */
+.projects-modern-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 238, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 238, 255, 0.1);
+  transition: all 0.5s ease;
+  height: 100%;
+  overflow: hidden;
+}
+
+.projects-modern-card:hover {
+  transform: translateY(-15px) rotateX(2deg) rotateY(2deg);
+  box-shadow: 0 0 50px rgba(0, 238, 255, 0.5), 0 0 80px rgba(255,0,247,0.2);
+  border-color: #00e6ff;
+}
+
+/* 📝 Card Text */
+.projects-card-title {
+  font-size: 1.4rem;
+  color: #00e6ff;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.projects-card-desc {
+  font-size: 1rem;
+  color: #cfcfcf;
+  line-height: 1.8;
+  white-space: pre-line;
+  transition: color 0.3s ease;
+}
+
+.projects-modern-card:hover .projects-card-desc {
+  color: #fff;
+}
+
+/* 🔘 Buttons */
+.projects-buttons {
+  margin-top: 20px;
+}
+
+.projects-btn {
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 6px 18px;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #00e6ff, #00ffcc);
+  color: #000;
+  border: none;
+  box-shadow: 0 0 15px rgba(0, 238, 255, 0.4);
+}
+
+.projects-btn:hover {
+  transform: scale(1.08) rotateZ(1deg);
+  box-shadow: 0 0 35px rgba(0, 238, 255, 0.8), 0 0 15px rgba(255,0,247,0.5);
+  background: linear-gradient(90deg, #00ffcc, #00e6ff);
+}
+
+/* 🎨 Personal Projects Card */
+.projects-modern-card.personal {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,0,247,0.3);
+  box-shadow: 0 0 25px rgba(255,0,247,0.2);
+}
+
+.projects-modern-card.personal:hover {
+  box-shadow: 0 0 50px rgba(255,0,247,0.7);
+  border-color: #ff00f7;
+}
+
+/* 📱 Responsive */
+@media (max-width: 992px) {
+  .projects-modern-title { font-size: 2.6rem; }
+  .projects-modern-subtitle { font-size: 1.4rem; }
+  .projects-card-title { font-size: 1.2rem; }
+  .projects-card-desc { font-size: 0.95rem; }
+  .projects-btn { padding: 5px 16px; font-size: 0.9rem; }
+}
+
+@media (max-width: 576px) {
+  .projects-modern-title { font-size: 2.2rem; }
+  .projects-modern-subtitle { font-size: 1.2rem; }
+  .projects-card-title { font-size: 1.05rem; }
+  .projects-card-desc { font-size: 0.9rem; }
+  .projects-btn { padding: 4px 14px; font-size: 0.85rem; }
+}

@@ -1,0 +1,95 @@
+/* ===============================
+   ⚡ 2025 Modern Contact Form
+=================================*/
+
+.contact-modern-section {
+  background: linear-gradient(135deg, #0d1117, #1b2735);
+  background-size: 400% 400%;
+  animation: contactGradient 15s ease infinite;
+  padding: 100px 20px;
+  color: #fff;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+@keyframes contactGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Title */
+.contact-title {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00e6ff, #ff00f7, #00e6ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  animation: titleFlow 5s infinite alternate;
+  margin-bottom: 60px;
+  text-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
+}
+
+/* Form Container */
+.contact-form-container {
+  background: rgba(255,255,255,0.05);
+  padding: 30px 25px;
+  border-radius: 20px;
+  border: 1px solid rgba(0,238,255,0.2);
+  backdrop-filter: blur(8px);
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 25px rgba(0,238,255,0.1);
+  transition: all 0.4s ease;
+}
+
+.contact-form-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 50px rgba(0,238,255,0.4);
+}
+
+/* Form Inputs */
+.contact-form-container .form-control {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(0,238,255,0.3);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact-form-container .form-control:focus {
+  border-color: #00e6ff;
+  box-shadow: 0 0 15px rgba(0,238,255,0.4);
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  outline: none;
+}
+
+/* Submit Button */
+.contact-btn {
+  background: linear-gradient(90deg, #00e6ff, #00ffcc);
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,238,255,0.4);
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0,238,255,0.8);
+  background: linear-gradient(90deg, #00ffcc, #00e6ff);
+}
+
+/* Alert */
+.alert {
+  border-radius: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}

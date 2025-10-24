@@ -1,0 +1,277 @@
+/* ===============================
+   🌈 2025 Modern Hero Styling
+   Fully Responsive + Animated
+=================================*/
+
+.home-section {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0d1117, #1b2735);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Animated Background Gradient */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Floating Particle Glow Background */
+.animated-bg::before,
+.animated-bg::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 238, 255, 0.05) 1%, transparent 60%);
+  animation: floatParticles 30s linear infinite;
+  z-index: 0;
+}
+
+.animated-bg::after {
+  animation-delay: 10s;
+}
+
+@keyframes floatParticles {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(10%, 10%) rotate(360deg);
+  }
+}
+
+/* 🌀 Profile Image Floating Animation */
+.profile-pic-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  animation: floatProfile 6s ease-in-out infinite;
+}
+
+@keyframes floatProfile {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.profile-pic {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00e6ff;
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.3);
+  animation: pulseGlow 4s ease-in-out infinite;
+  transition: all 0.4s ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(0, 238, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 238, 255, 0.7);
+  }
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(0, 238, 255, 0.9);
+}
+
+/* ✍️ Typing Animation for Name */
+.name-title {
+  font-size: 3rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 0 8px rgba(0, 238, 255, 0.3);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #00e6ff;
+  width: 0;
+  animation: typing 3s steps(25, end) forwards, blink 0.7s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+  background: linear-gradient(90deg, #00e6ff, #ff00f7, #00e6ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  animation: moveGradient 5s infinite alternate;
+}
+
+@keyframes moveGradient {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+/* Subtitle & Description */
+.subtitle {
+  font-size: 1.5rem;
+  color: #cfcfcf;
+  margin-bottom: 10px;
+  animation: fadeInUp 2s ease forwards;
+  opacity: 0;
+  animation-delay: 2s;
+}
+
+.description {
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto;
+  color: #a8b2c1;
+  line-height: 1.6;
+  animation: fadeInUp 2s ease forwards;
+  opacity: 0;
+  animation-delay: 2.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Highlighted Keywords */
+.highlight {
+  color: #00e6ff;
+  font-weight: 600;
+}
+
+/* ⚡ Glowing Buttons */
+.glow-btn,
+.glow-btn-outline {
+  border-radius: 40px;
+  font-weight: 600;
+  padding: 12px 30px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  margin: 10px 5px;
+}
+
+.glow-btn {
+  background: linear-gradient(90deg, #00e6ff, #00ffcc);
+  border: none;
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 238, 255, 0.6);
+}
+
+.glow-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(0, 238, 255, 0.9);
+}
+
+.glow-btn-outline {
+  border: 2px solid #00e6ff;
+  color: #00e6ff;
+  background: transparent;
+}
+
+.glow-btn-outline:hover {
+  background: #00e6ff;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.8);
+}
+
+/* ==========================
+   📱 Responsive Styles
+========================== */
+@media (max-width: 992px) {
+  .home-section {
+    padding: 40px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 220px;
+    height: 220px;
+  }
+
+  .name-title {
+    font-size: 2.3rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+
+  .name-title {
+    font-size: 1.9rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .glow-btn,
+  .glow-btn-outline {
+    width: 85%;
+  }
+}

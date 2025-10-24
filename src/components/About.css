@@ -1,0 +1,296 @@
+/* ===============================
+   🌈 2025 Modern About Styling
+   Unique Class Names - No Conflict
+=================================*/
+
+.about-modern-section {
+  position: relative;
+  width: 100%; /* ✅ Full width background */
+  overflow: hidden;
+  background: linear-gradient(135deg, #0d1117, #1b2735);
+  background-size: 400% 400%;
+  animation: aboutGradientShift 15s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* 🔥 Background Animation */
+@keyframes aboutGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 🌌 Floating Particles */
+.about-modern-section::before,
+.about-modern-section::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 238, 255, 0.05) 1%, transparent 60%);
+  animation: aboutFloatParticles 30s linear infinite;
+  z-index: 0;
+}
+
+.about-modern-section::after {
+  animation-delay: 10s;
+}
+
+@keyframes aboutFloatParticles {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(10%, 10%) rotate(360deg);
+  }
+}
+
+/* ✨ Gradient Title */
+.about-modern-title {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00e6ff, #ff00f7, #00e6ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  animation: aboutTextGradient 5s infinite alternate;
+  text-shadow: 0 0 10px rgba(0, 238, 255, 0.4);
+  margin-bottom: 60px;
+}
+
+@keyframes aboutTextGradient {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+/* 👤 Floating Profile Image */
+.about-modern-pic-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  animation: aboutFloatProfile 6s ease-in-out infinite;
+}
+
+@keyframes aboutFloatProfile {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.about-modern-pic {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00e6ff;
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.4);
+  animation: aboutPulseGlow 4s ease-in-out infinite;
+  transition: all 0.4s ease-in-out;
+}
+
+@keyframes aboutPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(0, 238, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(0, 238, 255, 0.8);
+  }
+}
+
+.about-modern-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0, 238, 255, 0.9);
+}
+
+/* 📝 About Text */
+.about-modern-text {
+  font-size: 1.1rem;
+  max-width: 700px;
+  color: #a8b2c1;
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+.about-modern-highlight {
+  color: #00e6ff;
+  font-weight: 600;
+}
+
+/* 🧠 Skills */
+.about-modern-skills-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #00e6ff;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+/* 🧩 Skill Bars */
+.about-modern-skillbar {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.about-modern-skillbar p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #cfcfcf;
+}
+
+/* 🎚️ Progress Bar */
+.about-modern-progress {
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 238, 255, 0.2);
+}
+
+.about-modern-progress .progress-bar {
+  background: linear-gradient(90deg, #00e6ff, #00ffcc);
+  animation: aboutFillProgress 2.5s ease forwards;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 238, 255, 0.7);
+}
+
+@keyframes aboutFillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress-value);
+  }
+}
+
+/* ==========================
+   📱 Responsive
+========================== */
+@media (max-width: 992px) {
+  .about-modern-section {
+    padding: 60px 20px;
+  }
+
+  .about-modern-pic {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-modern-title {
+    font-size: 2.4rem;
+  }
+
+  .about-modern-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-modern-pic {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-modern-title {
+    font-size: 2rem;
+  }
+
+  .about-modern-text {
+    font-size: 0.95rem;
+  }
+
+  .about-modern-skills-title {
+    font-size: 1.1rem;
+  }
+
+  .about-modern-skillbar p {
+    font-size: 0.9rem;
+  }
+}
+/* 🌈 Animated Multi-Color Highlights */
+.about-modern-highlight {
+  position: relative;
+  font-weight: 700;
+  animation: aboutColorPulse 3s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
+
+@keyframes aboutColorPulse {
+  0% { filter: drop-shadow(0 0 5px rgba(0, 238, 255, 0.6)); }
+  50% { filter: drop-shadow(0 0 15px rgba(255, 0, 255, 0.8)); }
+  100% { filter: drop-shadow(0 0 5px rgba(0, 238, 255, 0.6)); }
+}
+
+/* 🎨 Different color variants for highlights */
+.about-modern-highlight.cyan {
+  color: #00e6ff;
+}
+
+.about-modern-highlight.pink {
+  color: #ff4ffb;
+}
+
+.about-modern-highlight.purple {
+  color: #b366ff;
+}
+
+.about-modern-highlight.green {
+  color: #00ffb3;
+}
+
+.about-modern-highlight.rainbow {
+  background: linear-gradient(90deg, #00e6ff, #ff4ffb, #00ffb3, #ffc400);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: aboutRainbowFlow 4s linear infinite;
+}
+
+@keyframes aboutRainbowFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✨ Add a subtle reveal animation for the whole text */
+.about-animated-text {
+  animation: aboutFadeUp 1.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes aboutFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
